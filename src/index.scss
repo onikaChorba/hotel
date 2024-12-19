@@ -1,13 +1,13 @@
 @use "./scss/global" as global;
+@use "./scss/mixin.scss";
+@use "./scss/color.scss";
 
 .header,
 .hero {
-  background: rgba(234, 239, 246, 1);
+  background: color.$white;
 }
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include mixin.position-center;
   min-width: 135px;
   height: 40px;
   gap: 0px;
@@ -15,64 +15,46 @@
   &__primary {
     border-radius: 4px;
     opacity: 0px;
-    background: rgba(89, 113, 147, 1);
-    color: white;
+    background: color.$grey;
+    color: color.$white;
     a {
-      color: white;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 26px;
-      letter-spacing: 0.02em;
-      text-align: center;
+      color: color.$white;
+      @include mixin.font-style(400, 16px, 26px, 0.02em, center);
     }
   }
   &__secondary {
     width: 100%;
     height: 50px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 55px;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: rgba(34, 36, 38, 1);
+    @include mixin.font-style(400, 14px, 55px, 0.02em, center);
+    color: color.$black;
     background: transparent;
-    border: 1.5px solid rgba(89, 107, 134, 1);
+    border: 1.5px solid color.$grey;
   }
 }
 .header {
   width: 100%;
   height: 56px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include mixin.position-sb;
   padding-top: 20px;
   font-family: "Open Sans", sans-serif;
   &__logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixin.position-sb;
     gap: 10px;
   }
   &__logo-text {
     font-family: "Open Sans", sans-serif;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 55px;
-    text-align: left;
-    color: rgba(89, 113, 147, 1);
+    @include mixin.font-style(600, 26px, 55px, 0em, left);
+    color: color.$grey;
   }
   &__nav {
     display: flex;
     gap: 30px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    color: rgba(53, 54, 55, 1);
+    @include mixin.font-style(400, 18px, 26px, 0.02em, left);
+
+    color: color.$brown;
   }
   &__nav-link {
-    color: rgba(53, 54, 55, 1);
+    color: color.$brown;
   }
 }
 .hero {
@@ -85,38 +67,33 @@
   min-height: calc(100vh - 56px);
   height: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: rgba(61, 69, 80, 1);
+  @include mixin.position-start;
+  color: color.$grey-blue;
 
   &__text,
   &__img {
     width: 50%;
   }
   &__text {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    @include mixin.position-column(40px);
 
     p {
-      color: rgba(147, 147, 147, 1);
+      color: color.$grey-light;
     }
   }
   &__buttons {
     width: fit-content;
     display: flex;
-
     gap: 30px;
   }
   &__button-play {
-    color: rgba(53, 54, 55, 1);
+    color: color.$brown;
     margin: 0 auto;
   }
   &__img {
     position: relative;
-    background: rgba(246, 252, 250, 1);
-    box-shadow: -5px 0px 39px 0px rgba(118, 118, 118, 0.08);
+    background: color.$white-bg;
+    box-shadow: -5px 0px 39px 0px color.$shadow;
     width: 539px;
     height: 540px;
     gap: 0px;
@@ -136,28 +113,24 @@
 .hero-img {
   position: relative;
   &__market {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixin.position-center;
     width: 206px;
     height: 163px;
     border-radius: 8px;
-    background: rgba(246, 252, 250, 1);
-    box-shadow: -5px 0px 39px 0px rgba(118, 118, 118, 0.08);
+    background: color.$white-bg;
+    box-shadow: -5px 0px 39px 0px color.$shadow;
     z-index: 200;
     position: absolute;
     left: -100px;
     top: 430px;
   }
   &__payment {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixin.position-center;
     width: 113px;
     height: 124px;
     border-radius: 8px;
-    background: rgba(246, 252, 250, 1);
-    box-shadow: -5px 0px 39px 0px rgba(118, 118, 118, 0.08);
+    background: color.$white-bg;
+    box-shadow: -5px 0px 39px 0px color.$shadow;
     z-index: 200;
     position: absolute;
     right: -470px;
@@ -166,47 +139,36 @@
 }
 .check-availability {
   &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixin.position-sb;
   }
   &__content-img {
     display: flex;
     align-items: flex-end;
     height: 523px;
-    background: rgba(177, 190, 208, 1);
+    background: color.$grey-bg-img;
   }
   &__content-form {
     width: 490px;
     height: calc(523px - 80px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    @include mixin.position-column-center(30px);
     padding: 40px;
-    background: rgba(246, 252, 250, 1);
+    background: color.$white;
   }
 }
 
 .input-wrapper {
   width: 100%;
   &__label {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 55px;
-    letter-spacing: 0.03em;
-    text-align: left;
-    color: rgba(34, 36, 38, 1);
+    @include mixin.font-style(400, 14px, 55px, 0.03em, left);
+    color: color.$black;
   }
   &__input,
   &__select {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include mixin.position-sb;
     gap: 10px;
     text-align: left;
-    border: 1px solid rgba(171, 171, 171, 1);
+    border: 1px solid color.$grey-light;
     border-radius: 2px;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -223,133 +185,92 @@
       background: none;
       border: none;
       appearance: none;
-      font-size: 16px;
-      font-weight: 400;
-      letter-spacing: 0.03em;
-      text-align: left;
-
-      color: rgba(164, 164, 164, 1);
+      @include mixin.font-style(400, 16px, 55px, 0.03em, left);
+      color: color.$grey-light;
     }
   }
 }
 .popular-room {
   &__content {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    @include mixin.position-wrap(20px);
   }
   &__content-block {
     width: 31%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 20px;
-    border: 1px solid rgba(89, 107, 134, 1);
+    @include mixin.position-column-start(20px);
+    border: 1px solid color.$grey-blue;
     img {
       width: 100%;
     }
   }
   &__content-imgs {
-    display: flex;
-    justify-content: space-between;
+    @include mixin.position-sb;
     gap: 10px;
   }
   &__content-img {
-    display: flex;
-    justify-content: center;
+    @include mixin.position-center;
     img {
       width: 20px;
     }
     span {
-      color: rgba(114, 114, 114, 1);
+      color: color.$grey-light;
       padding-left: 5px;
     }
   }
   &__content-prise {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 55px;
-    text-align: left;
+    @include mixin.font-style(400, 24px, 55px, 0rem, left);
   }
   &__content-prise span {
-    color: rgba(89, 107, 134, 1);
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 55px;
-    text-align: left;
+    color: color.$grey;
+    @include mixin.font-style(600, 30px, 55px, 0rem, left);
   }
 }
 
 .facilities {
   &__content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    @include mixin.position-wrap(20px);
   }
   &__block {
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    @include mixin.position-column(20px);
   }
   &__block-title {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    @include mixin.position-sb;
   }
   &__block-title p {
     padding: 0px;
-    color: rgba(19, 19, 19, 1);
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 55px;
-    text-align: left;
+    color: color.$black;
+    @include mixin.font-style(400, 24px, 55px, 0rem, left);
   }
   &__smallblocks {
     padding-top: 80px;
-    display: flex;
-    flex-wrap: wrap;
+    @include mixin.position-wrap(0px);
   }
   &__smallblocks hr {
-    border: 1.5px solid rgba(195, 195, 195, 1);
+    border: 1.5px solid color.$grey-light;
   }
   &__smallblock {
     width: 24%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    @include mixin.position-column(10px);
   }
   &__smallblock span {
-    color: rgba(89, 107, 134, 1);
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 55px;
-    text-align: center;
+    color: color.$grey;
+    @include mixin.font-style(700, 50px, 55px, 0rem, center);
   }
   &__smallblock p {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: rgba(147, 147, 147, 1);
+    @include mixin.font-style(400, 18px, 24px, 0.02rem, center);
+    color: color.$grey-light;
   }
 }
 
 .discover {
-  display: flex;
-  justify-content: space-between;
-
+  @include mixin.position-sb;
   &__textblock {
     width: 50%;
     height: 416px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include mixin.position-column(20px);
     text-align: left;
-    gap: 20px;
   }
 
   &__buttons {
@@ -392,12 +313,8 @@
     width: 30%;
     background: rgba(246, 252, 250, 1);
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    @include mixin.position-column-start(20px);
     box-sizing: border-box;
-    gap: 20px;
   }
 
   &__img img {
@@ -410,21 +327,19 @@
   }
 
   &__name {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 34px;
-    color: rgba(19, 19, 19, 1);
+    @include mixin.font-style(500, 24px, 34px, 0rem, left);
+    color: color.$black;
   }
 
   &__company {
     font-size: 16px;
-    color: rgba(109, 117, 137, 1);
+    color: color.$grey-light;
   }
 
   &__text {
     font-size: 16px;
     line-height: 24px;
-    color: rgba(109, 117, 137, 1);
+    color: color.$grey;
   }
 }
 .news {
@@ -435,26 +350,23 @@
   &__heading {
     font-size: 24px;
     font-weight: 700;
-    color: #131313;
+    color: color.$black;
   }
   &__subtitle {
     font-size: 16px;
     font-weight: 400;
-    color: #757575;
+    color: color.$brown;
   }
 
   &__blocks {
-    display: flex;
-    justify-content: space-between;
+    @include mixin.position-sb;
     gap: 20px;
     width: 100%;
   }
 
   &__block {
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    @include mixin.position-column(20px);
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 15px;
@@ -466,25 +378,21 @@
   }
 
   &__block-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    @include mixin.position-column(15px);
   }
 
   &__block-meta {
-    display: flex;
-    justify-content: space-between;
+    @include mixin.position-sb;
     gap: 10px;
   }
 
   &__block-meta-item {
-    display: flex;
-    align-items: center;
+    @include mixin.position-center;
     gap: 5px;
 
     p {
       font-size: 14px;
-      color: #596b86;
+      color: color.$grey;
     }
   }
 
@@ -492,13 +400,13 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 1.5;
-    color: #131313;
+    color: color.$black;
   }
 
   &__block-text {
     font-size: 14px;
     line-height: 1.6;
-    color: #757575;
+    color: color.$grey;
   }
 
   &__block-button {
@@ -507,13 +415,13 @@
     gap: 10px;
     font-size: 16px;
     font-weight: 500;
-    color: #596b86;
+    color: color.$grey;
     background: none;
     border: none;
     cursor: pointer;
 
     &:hover {
-      color: #131313;
+      color: color.$black;
     }
   }
 
@@ -526,25 +434,15 @@
   width: 100%;
   height: 383px;
   background: rgba(177, 190, 208, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 40px;
+  @include mixin.position-column-center(40px);
   &__text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.155em;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
+    @include mixin.font-style(400, 18px, 24px, 0.155em, center);
+    color: color.$white;
   }
   &__title {
     max-width: 533px;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 50px;
-    text-align: center;
-    color: rgba(51, 64, 82, 1);
+    @include mixin.font-style(400, 40px, 50px, 0em, center);
+    color: color.$grey;
   }
   &__form {
     display: flex;
@@ -553,84 +451,60 @@
   &__form-input {
     width: 354px;
     height: 45px;
-    box-shadow: 0px 2px 12px 0px rgba(52, 52, 52, 0.15);
-    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 12px 0px color.$shadow;
+    background: color.$white;
     border-radius: 6px;
     padding-left: 20px;
   }
   &__form-input ::placeholder {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 50px;
-    text-align: left;
-    color: rgba(161, 161, 161, 1);
+    @include mixin.font-style(400, 14px, 50px, 0em, left);
+    color: color.$grey-light;
   }
   &__form-button {
-    box-shadow: -3px 2px 12px 0px rgba(0, 0, 0, 0.15);
-    background: rgba(136, 156, 185, 1);
-
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: rgba(255, 255, 255, 1);
+    box-shadow: -3px 2px 12px 0px color.$shadow;
+    background: color.$grey-light;
+    @include mixin.font-style(400, 16px, 26px, 0.02em, center);
+    color: color.$white;
     width: 107px;
     height: 45px;
     border-radius: 6px;
   }
 }
 .stay-connected {
-  display: flex;
-  flex-wrap: wrap;
+  @include mixin.position-wrap(0px);
   width: 100%;
   margin-top: 60px;
   margin-bottom: 60px;
   background: #f9f9f9;
   &__block {
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    @include mixin.position-column(20px);
   }
   &__heading {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
-    color: rgba(19, 19, 19, 1);
+    @include mixin.font-style(400, 20px, 26px, 0em, center);
+    color: color.$black;
   }
   &__socials {
-    display: flex;
-    flex-wrap: wrap;
+    @include mixin.position-wrap(20px);
     height: 40px;
-    gap: 20px;
   }
   &__social {
     width: 32px;
     height: 32px;
-    border: 1px solid rgba(217, 217, 217, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid color.$grey-light;
+    @include mixin.position-center;
     border-radius: 4px;
   }
 }
 .footer {
   width: 100%;
   height: 60px;
-  background: rgba(177, 190, 208, 1);
+  background: color.$grey-light;
   &__content {
     max-width: 1110px;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    color: rgba(0, 0, 0, 0.42);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 26px;
-    text-align: left;
+    @include mixin.position-sb;
+    color: color.$black;
+    @include mixin.font-style(500, 18px, 26px, 0em, left);
   }
 }
