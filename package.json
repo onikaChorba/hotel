@@ -1,5 +1,6 @@
 {
-  "name": "webpack_template",
+  "homepage": "https://onikachorba.github.io/",
+  "name": "hotel",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
