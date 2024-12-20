@@ -1,0 +1,547 @@
+@use "./scss/global" as global;
+@use "./scss/mixin.scss";
+@use "./scss/color.scss";
+
+.header,
+.hero {
+  background: color.$white;
+}
+.button {
+  @include mixin.position-center;
+  min-width: 135px;
+  height: 40px;
+  gap: 0px;
+  background: none;
+  &__primary {
+    border-radius: 4px;
+    opacity: 0px;
+    background: color.$grey;
+    color: color.$white;
+    a {
+      color: color.$white;
+      @include mixin.font-style(400, 16px, 26px, 0.02em, center);
+    }
+  }
+  &__secondary {
+    width: 100%;
+    height: 50px;
+    @include mixin.font-style(400, 14px, 55px, 0.02em, center);
+    color: color.$black;
+    background: transparent;
+    border: 1.5px solid color.$grey;
+  }
+}
+.header {
+  width: 100%;
+  height: 56px;
+  @include mixin.position-sb;
+  padding-top: 20px;
+  font-family: "Open Sans", sans-serif;
+  &__logo {
+    @include mixin.position-sb;
+    gap: 10px;
+  }
+  &__logo-text {
+    font-family: "Open Sans", sans-serif;
+    @include mixin.font-style(600, 26px, 55px, 0em, left);
+    color: color.$grey;
+  }
+  &__nav {
+    display: flex;
+    gap: 30px;
+    @include mixin.font-style(400, 18px, 26px, 0.02em, left);
+
+    color: color.$brown;
+  }
+  &__nav-link {
+    color: color.$brown;
+
+    &.active {
+      color: color.$grey;
+      font-weight: bold;
+      border-bottom: 1.5px solid color.$grey;
+    }
+  }
+}
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 56px);
+  height: 100%;
+}
+.hero-content {
+  max-width: 1440px;
+  min-height: calc(100vh - 56px);
+  height: 100%;
+  margin: 0 auto;
+  @include mixin.position-start;
+  color: color.$grey-blue;
+
+  &__text,
+  &__img {
+    width: 50%;
+  }
+  &__text {
+    @include mixin.position-column(40px);
+
+    p {
+      color: color.$grey-light;
+    }
+  }
+  &__buttons {
+    width: fit-content;
+    display: flex;
+    gap: 30px;
+  }
+  &__button-play {
+    color: color.$brown;
+    margin: 0 auto;
+  }
+  &__img {
+    position: relative;
+    background: color.$white-bg;
+    box-shadow: -5px 0px 39px 0px color.$shadow;
+    width: 539px;
+    height: 540px;
+    gap: 0px;
+    opacity: 0px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__img-building {
+    width: 320px;
+    height: 559px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.hero-img {
+  position: relative;
+  &__market {
+    @include mixin.position-center;
+    width: 206px;
+    height: 163px;
+    border-radius: 8px;
+    background: color.$white-bg;
+    box-shadow: -5px 0px 39px 0px color.$shadow;
+    z-index: 200;
+    position: absolute;
+    left: -100px;
+    top: 430px;
+    padding: 20px;
+  }
+  &__payment {
+    @include mixin.position-center;
+    width: 113px;
+    height: 124px;
+    border-radius: 8px;
+    background: color.$white-bg;
+    box-shadow: -5px 0px 39px 0px color.$shadow;
+    z-index: 200;
+    position: absolute;
+    right: -470px;
+    top: -10px;
+  }
+}
+.circle1 {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background: color.$circle-bg;
+  border-radius: 50%;
+  top: -70px;
+  right: -200px;
+}
+.circle2 {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: color.$circle-bg;
+  border-radius: 50%;
+  top: 70px;
+  left: -10px;
+}
+.circle3 {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  background: color.$circle-bg;
+  border-radius: 50%;
+  top: 300px;
+  left: 550px;
+}
+.check-availability {
+  &__content {
+    @include mixin.position-sb;
+  }
+  &__content-img {
+    display: flex;
+    align-items: flex-end;
+    height: 523px;
+    background: color.$grey-bg-img;
+  }
+  &__content-form {
+    width: 490px;
+    height: calc(523px - 80px);
+    @include mixin.position-column-center(30px);
+    padding: 40px;
+    background: color.$white;
+  }
+}
+
+.input-wrapper {
+  width: 100%;
+  &__label {
+    @include mixin.font-style(400, 14px, 55px, 0.03em, left);
+    color: color.$black;
+  }
+  &__input,
+  &__select {
+    width: 100%;
+    @include mixin.position-sb;
+    gap: 10px;
+    text-align: left;
+    border: 1px solid color.$grey-light;
+    border-radius: 2px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    input {
+      background: none;
+      text-align: left;
+      width: calc(100% - 23px);
+    }
+    img {
+      width: 23px;
+    }
+    select {
+      padding: 0px;
+      background: none;
+      border: none;
+      appearance: none;
+      @include mixin.font-style(400, 16px, 55px, 0.03em, left);
+      color: color.$grey-light;
+    }
+  }
+}
+.popular-room {
+  &__content {
+    width: 100%;
+    @include mixin.position-wrap(20px);
+  }
+  &__content-block {
+    width: 31%;
+    @include mixin.position-column-start(20px);
+    border: 1px solid color.$grey-blue;
+    img {
+      width: 100%;
+    }
+  }
+  &__content-imgs {
+    @include mixin.position-sb;
+    gap: 10px;
+  }
+  &__content-img {
+    @include mixin.position-center;
+    img {
+      width: 20px;
+    }
+    span {
+      color: color.$grey-light;
+      padding-left: 5px;
+    }
+  }
+  &__content-prise {
+    @include mixin.font-style(400, 24px, 55px, 0rem, left);
+  }
+  &__content-prise span {
+    color: color.$grey;
+    @include mixin.font-style(600, 30px, 55px, 0rem, left);
+  }
+}
+
+.facilities {
+  &__content {
+    @include mixin.position-wrap(20px);
+  }
+  &__block {
+    width: 30%;
+    @include mixin.position-column(20px);
+  }
+  &__block-title {
+    width: 100%;
+    @include mixin.position-sb;
+  }
+  &__block-title p {
+    padding: 0px;
+    color: color.$black;
+    @include mixin.font-style(400, 24px, 55px, 0rem, left);
+  }
+  &__smallblocks {
+    padding-top: 80px;
+    @include mixin.position-wrap(0px);
+  }
+  &__smallblocks hr {
+    border: 1.5px solid color.$grey-light;
+  }
+  &__smallblock {
+    width: 24%;
+    @include mixin.position-column(10px);
+  }
+  &__smallblock span {
+    color: color.$grey;
+    @include mixin.font-style(700, 50px, 55px, 0rem, center);
+  }
+  &__smallblock p {
+    @include mixin.font-style(400, 18px, 24px, 0.02rem, center);
+    color: color.$grey-light;
+  }
+}
+
+.discover {
+  @include mixin.position-sb;
+  &__textblock {
+    width: 50%;
+    height: 416px;
+    @include mixin.position-column(20px);
+    text-align: left;
+  }
+
+  &__buttons {
+    width: fit-content;
+    display: flex;
+    gap: 20px;
+  }
+
+  &__imgblock {
+    width: 50%;
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__playicon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__slide {
+    width: 30%;
+    background: rgba(246, 252, 250, 1);
+    padding: 30px;
+    @include mixin.position-column-start(20px);
+    box-sizing: border-box;
+  }
+
+  &__img {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    background: color.$white;
+    overflow: hidden;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__name {
+    @include mixin.font-style(500, 24px, 34px, 0rem, left);
+    color: color.$black;
+  }
+
+  &__company {
+    font-size: 16px;
+    color: color.$grey-light;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: color.$grey;
+  }
+}
+.news {
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: color.$black;
+  }
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: color.$brown;
+  }
+
+  &__blocks {
+    @include mixin.position-sb;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__block {
+    width: 30%;
+    @include mixin.position-column(20px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+  }
+
+  &__block-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  &__block-info {
+    @include mixin.position-column(15px);
+  }
+
+  &__block-meta {
+    @include mixin.position-sb;
+    gap: 10px;
+  }
+
+  &__block-meta-item {
+    @include mixin.position-center;
+    gap: 5px;
+
+    p {
+      font-size: 14px;
+      color: color.$grey;
+    }
+  }
+
+  &__block-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: color.$black;
+  }
+
+  &__block-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: color.$grey;
+  }
+
+  &__block-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: color.$grey;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: color.$black;
+    }
+  }
+
+  &__block-button-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+.stay-in-touch {
+  width: 100%;
+  height: 383px;
+  background: rgba(177, 190, 208, 1);
+  @include mixin.position-column-center(40px);
+  &__text {
+    @include mixin.font-style(400, 18px, 24px, 0.155em, center);
+    color: color.$white;
+  }
+  &__title {
+    max-width: 533px;
+    @include mixin.font-style(400, 40px, 50px, 0em, center);
+    color: color.$grey;
+  }
+  &__form {
+    display: flex;
+    gap: 20px;
+  }
+  &__form-input {
+    width: 354px;
+    height: 45px;
+    box-shadow: 0px 2px 12px 0px color.$shadow;
+    background: color.$white;
+    border-radius: 6px;
+    padding-left: 20px;
+  }
+  &__form-input ::placeholder {
+    @include mixin.font-style(400, 14px, 50px, 0em, left);
+    color: color.$grey-light;
+  }
+  &__form-button {
+    box-shadow: -3px 2px 12px 0px color.$shadow;
+    background: color.$grey-primary;
+    @include mixin.font-style(400, 16px, 26px, 0.02em, center);
+    color: color.$white;
+    width: 107px;
+    height: 45px;
+    border-radius: 6px;
+  }
+}
+.stay-connected {
+  @include mixin.position-wrap(0px);
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: #f9f9f9;
+  &__block {
+    width: 30%;
+    @include mixin.position-column(20px);
+  }
+  &__heading {
+    @include mixin.font-style(400, 20px, 26px, 0em, center);
+    color: color.$black;
+  }
+  &__socials {
+    @include mixin.position-wrap(20px);
+    height: 40px;
+  }
+  &__social {
+    width: 32px;
+    height: 32px;
+    border: 1px solid color.$grey-light;
+    @include mixin.position-center;
+    border-radius: 4px;
+  }
+}
+.footer {
+  width: 100%;
+  height: 60px;
+  background: color.$footer-bg;
+  &__content {
+    max-width: 1110px;
+    height: 100%;
+    @include mixin.position-sb;
+    color: color.$black;
+    @include mixin.font-style(500, 18px, 26px, 0em, left);
+  }
+}

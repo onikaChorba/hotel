@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Average+Sans&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <img src="./assets/images/logo.svg" alt="logo">
+      <p class="header__logo-text">HOTEL</p>
+    </div>
+    <nav class="header__nav">
+      <a class="header__nav-link active" href="index.html">Home</a>
+      <a class="header__nav-link" href="#">Branch</a>
+      <a class="header__nav-link" href="#">Search</a>
+      <a class="header__nav-link" href="#">About us</a>
+      <a class="header__nav-link" href="#">Pages</a>
+      <a class="header__nav-link" href="#">Blog</a>
+    </nav>
+    <div class="button button__primary">
+      <a href="sermon-event.html">Reservation</a>
+    </div>
+  </header>
+  <menu>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-content__text">
+          <h1 class="heading__1">Discover a hotel
+            that defies a new
+            dimension of luxury.
+          </h1>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy.</p>
+          <div class="hero-content__buttons">
+            <button class="button button__primary">Get Started</button>
+            <button class="button hero-content__button-play"><img src="./assets/images/play.svg" alt="play" width="50px"
+                height="50px" /> Get Started</button>
+          </div>
+        </div>
+        <div class="hero-img">
+          <div class="circle1"></div><div class="circle2"></div><div class="circle3"></div>
+          <div class="hero-content__img">
+            <img src="./assets/images/building.png" alt="building" class="hero-content__img-building" />
+          </div>
+          <div class="hero-img__market">
+            <img src="./assets/images/market-static.png" alt="market-static" />
+          </div>
+          <div class="hero-img__payment">
+            <img src="./assets/images/payment.svg" alt="payment" class="hero-content__img-payment" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section check-availability">
+      <div class="section__title">
+        <h2 class="heading__2">Check Availability</h2>
+        <p class="text section__text">It is a long established fact that a reader will be distracted by the readable content of a
+          page.</p>
+      </div>
+      <div class="check-availability__content">
+        <div class="check-availability__content-img">
+          <img src="./assets/images/town2.png" alt="town" />
+        </div>
+        <form class="check-availability__content-form">
+          <div class="input-wrapper">
+            <label for="check-in" class="input-wrapper__label">CHECK-IN</label>
+            <div class="input-wrapper__input">
+              <input type="text" id="check-in" placeholder="Thu, 21 Jul 2022">
+              <img src="./assets/images/calendar.svg" alt="Calendar Icon">
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label class="input-wrapper__label">CHECK-OUT</label>
+            <div class="input-wrapper__input">
+              <input type="text" placeholder="Fri, 22 Jul 2022" />
+              <img src="./assets/images/calendar.svg" />
+            </div>
+          </div>
+          <div class="input-wrapper">
+            <label for="rooms" class="input-wrapper__label">Guest</label>
+            <div class="input-wrapper__select">
+              <select id="rooms" class="input-wrapper__select">
+                <option value="1">1 room</option>
+                <option value="2">2 rooms</option>
+              </select>
+              <img src="./assets/images/arrow.svg" alt="arrow" />
+            </div>
+          </div>
+          <button class="button button__secondary">CHECK AVAILABILITY</button>
+        </form>
+      </div>
+    </section>
+    <section class="section popular-room">
+      <div class="section__title">
+        <h2 class="heading__2">Our Most Populer Room</h2>
+        <p class="text section__text">It is a long established fact that a reader will be distracted by the readable content of a
+          page.</p>
+      </div>
+      <div class="popular-room__content">
+        <div class="popular-room__content-block">
+          <img src="./assets/images/room1.png" alt="room1" />
+          <h3 class="heading__3">Deluxe Contrast Room</h3>
+          <div class="popular-room__content-imgs">
+            <div class="popular-room__content-img"><img src="./assets/images/size.svg" alt="size" /><span>52 sqm</span>
+            </div>
+            <div class="popular-room__content-img"><img src="./assets/images/bed.svg" alt="bed" /><span>2 Bed</span>
+            </div>
+            <div class="popular-room__content-img"><img src="./assets/images/bathroom.svg" alt="bathroom" /><span>1
+                Bathroom</span></div>
+          </div>
+          <div class="popular-room__content-prise"><span>$200</span>/ Night</div>
+        </div>
+        <div class="popular-room__content-block">
+          <img src="./assets/images/room2.png" alt="room2" />
+          <h3 class="heading__3">Luxery Twin Room</h3>
+          <div class="popular-room__content-imgs">
+            <div class="popular-room__content-img"><img src="./assets/images/size.svg" alt="size" /><span>52 sqm</span>
+            </div>
+            <div class="popular-room__content-img"><img src="./assets/images/bed.svg" alt="bed" /><span>2 Bed</span>
+            </div>
+            <div class="popular-room__content-img"><img src="./assets/images/bathroom.svg" alt="bathroom" /><span>1
+                Bathroom</span></div>
+          </div>
+          <div class="popular-room__content-prise"><span>$250</span>/ Night</div>
+        </div>
+        <div class="popular-room__content-block">
+          <img src="./assets/images/room3.png" alt="room3" />
+          <h3 class="heading__3">Single Contrast Room</h3>
+          <div class="popular-room__content-imgs">
+            <div class="popular-room__content-img"><img src="./assets/images/size.svg" alt="size" /><span>52 sqm</span>
+            </div>
+            <div class="popular-room__content-img"><img src="./assets/images/bed.svg" alt="bed" /><span>2 Bed</span>
+            </div>
+            <div class="popular-room__content-img"><img src="./assets/images/bathroom.svg" alt="bathroom" /><span>1
+                Bathroom</span></div>
+          </div>
+          <div class="popular-room__content-prise"><span>$280</span>/ Night</div>
+        </div>
+      </div>
+    </section>
+    <section class="section facilities">
+      <div class="section__title">
+        <p class="text section__text">OUR SERVICES</p>
+        <h2 class="heading__2">Hotel Facilities</h2>
+      </div>
+      <div class="facilities__content">
+        <div class="facilities__block">
+          <div class="facilities__block-title">
+            <p>Pick up & Drop</p><img src="./assets/images/car.svg" alt="car" />
+          </div>
+          <p class="text">It is a long established fact that a reader will be distracted by the readable content of a
+            page.</p>
+        </div>
+        <div class="facilities__block">
+          <div class="facilities__block-title">
+            <p>Parking Space</p><img src="./assets/images/carP.svg" alt="car" />
+          </div>
+          <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="facilities__block">
+          <div class="facilities__block-title">
+            <p>Room Services</p><img src="./assets/images/service.svg" alt="service" />
+          </div>
+          <p class="text">It is a long established fact that a reader will be distracted by the readable content of a
+            page.</p>
+        </div>
+        <div class="facilities__block">
+          <div class="facilities__block-title">
+            <p>Swimming Pool</p><img src="./assets/images/swimming.svg" alt="swimming" />
+          </div>
+          <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <div class="facilities__block">
+          <div class="facilities__block-title">
+            <p>Fibre Internet</p><img src="./assets/images/internet.svg" alt="internet" />
+          </div>
+          <p class="text">It is a long established fact that a reader will be distracted by the readable content of a
+            page.</p>
+        </div>
+        <div class="facilities__block">
+          <div class="facilities__block-title">
+            <p>Breakfast</p><img src="./assets/images/breakfast.svg" alt="breakfast" />
+          </div>
+          <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+      </div>
+      <div class="facilities__smallblocks">
+        <div class="facilities__smallblock"><span>302+</span>
+          <p>Room & Suites</p>
+        </div>
+        <hr>
+        <div class="facilities__smallblock"><span>25</span>
+          <p>Restaurant</p>
+        </div>
+        <hr>
+        <div class="facilities__smallblock"><span>510+</span>
+          <p>Exceptional Food</p>
+        </div>
+        <hr>
+        <div class="facilities__smallblock"><span>65</span>
+          <p>Destination</p>
+        </div>
+      </div>
+    </section>
+    <section class="section discover">
+      <div class="discover__textblock">
+        <h2 class="discover__heading heading__2">Discover Our History</h2>
+        <p class="discover__text text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+          has
+          been the industry's standard dummy.</p>
+        <p class="discover__text text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+          has
+          been the industry's standard dummy.</p>
+        <div class="discover__buttons">
+          <button class="button button__primary">Explore More</button>
+          <button class="button button--play">
+            <img src="./assets/images/play.svg" alt="play" class="button__icon" /> Get Started
+          </button>
+        </div>
+      </div>
+      <div class="discover__imgblock">
+        <img src="./assets/images/roomsbg.jpeg" alt="Room Background" class="discover__image" />
+        <img src="./assets/images/playicons.svg" alt="Play Icon" class="discover__playicon" />
+      </div>
+    </section>
+    <section class="section">
+      <div class="section__title">
+        <h2 class="heading__2">Our Happy Customers</h2>
+        <p class="text section__text">Know about our clients, we are a worldwide corporate brand</p>
+      </div>
+      <div class="carousel swiper">
+        <div class="carousel__wrapper swiper-wrapper">
+          <div class="carousel__slide swiper-slide ">
+            <div class="carousel__img">
+              <img src="./assets/images/user1.png" alt="Wade Warren" />
+            </div>
+            <div class="carousel__title">
+              <h4 class="carousel__name">Wade Warren</h4>
+              <p class="carousel__company">Louis Vuitton</p>
+            </div>
+            <p class="carousel__text">Necessary to deliver white glove, fully managed campaigns that surpass
+              industry benchmarks. Take your career to the next level.</p>
+          </div>
+          <div class="carousel__slide swiper-slide">
+            <div class="carousel__img">
+              <img src="./assets/images/user2.png" alt="Albert Florise" />
+            </div>
+            <div class="carousel__title">
+              <h4 class="carousel__name">Albert Florise</h4>
+              <p class="carousel__company">Nintendo</p>
+            </div>
+            <p class="carousel__text">Necessary to deliver white glove, fully managed campaigns that surpass
+              industry benchmarks. Take your career to the next level.</p>
+          </div>
+          <div class="carousel__slide swiper-slide">
+            <div class="carousel__img">
+              <img src="./assets/images/user3.png" alt="Jenny Wilson" />
+            </div>
+            <div class="carousel__title">
+              <h4 class="carousel__name">Jenny Wilson</h4>
+              <p class="carousel__company">Bank of America</p>
+            </div>
+            <p class="carousel__text">Necessary to deliver white glove, fully managed campaigns that surpass
+              industry benchmarks. Take your career to the next level.</p>
+          </div>
+          <div class="carousel__slide swiper-slide ">
+            <div class="carousel__img">
+              <img src="./assets/images/user1.png" alt="Wade Warren" />
+            </div>
+            <div class="carousel__title">
+              <h4 class="carousel__name">Wade Warren</h4>
+              <p class="carousel__company">Louis Vuitton</p>
+            </div>
+            <p class="carousel__text">Necessary to deliver white glove, fully managed campaigns that surpass
+              industry benchmarks. Take your career to the next level.</p>
+          </div>
+          <div class="carousel__slide swiper-slide">
+            <div class="carousel__img">
+              <img src="./assets/images/user2.png" alt="Albert Florise" />
+            </div>
+            <div class="carousel__title">
+              <h4 class="carousel__name">Albert Florise</h4>
+              <p class="carousel__company">Nintendo</p>
+            </div>
+            <p class="carousel__text">Necessary to deliver white glove, fully managed campaigns that surpass
+              industry benchmarks. Take your career to the next level.</p>
+          </div>
+          <div class="carousel__slide swiper-slide">
+            <div class="carousel__img">
+              <img src="./assets/images/user3.png" alt="Jenny Wilson" />
+            </div>
+            <div class="carousel__title">
+              <h4 class="carousel__name">Jenny Wilson</h4>
+              <p class="carousel__company">Bank of America</p>
+            </div>
+            <p class="carousel__text">Necessary to deliver white glove, fully managed campaigns that surpass
+              industry benchmarks. Take your career to the next level.</p>
+          </div>
+        </div>
+        <div class="carousel__button carousel__button--prev swiper-button-prev"></div>
+        <div class="carousel__button carousel__button--next swiper-button-next"></div>
+      </div>
+    </section>
+    <section class="section news">
+      <div class="section__title">
+        <h3 class=" heading__2">HOTEL BLOG</h3>
+        <p class="text section__text">Our News</p>
+      </div>
+      <div class="news__blocks">
+        <div class="news__block">
+          <img class="news__block-image" src="./assets/images/news-img1.png" alt="News Image 1" />
+          <div class="news__block-info">
+            <div class="news__block-meta">
+              <div class="news__block-meta-item">
+                <img src="./assets/images/travel.svg" alt="Travel Icon" />
+                <p>Travel</p>
+              </div>
+              <div class="news__block-meta-item">
+                <img src="./assets/images/comment.svg" alt="Comment Icon" />
+                <p>2 comments</p>
+              </div>
+            </div>
+            <h4 class="news__block-title">How To Travel With Map</h4>
+            <p class="news__block-text text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </p>
+            <button class="news__block-button">
+              Read More
+              <img class="news__block-button-icon" src="./assets/images/arrow-next.svg" alt="Arrow Icon" />
+            </button>
+          </div>
+        </div>
+        <div class="news__block">
+          <img class="news__block-image" src="./assets/images/news-img2.png" alt="News Image 1" />
+          <div class="news__block-info">
+            <div class="news__block-meta">
+              <div class="news__block-meta-item">
+                <img src="./assets/images/travel.svg" alt="Travel Icon" />
+                <p>Single Contrast Room</p>
+              </div>
+              <div class="news__block-meta-item">
+                <img src="./assets/images/comment.svg" alt="Comment Icon" />
+                <p>2 comments</p>
+              </div>
+            </div>
+            <h4 class="news__block-title">How To Travel With Map</h4>
+            <p class="news__block-text text">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.</p>
+            <button class="news__block-button">
+              Read More
+              <img class="news__block-button-icon" src="./assets/images/arrow-next.svg" alt="Arrow Icon" />
+            </button>
+          </div>
+        </div>
+        <div class="news__block">
+          <img class="news__block-image" src="./assets/images/news-img3.png" alt="News Image 1" />
+          <div class="news__block-info">
+            <div class="news__block-meta">
+              <div class="news__block-meta-item">
+                <img src="./assets/images/travel.svg" alt="Travel Icon" />
+                <p>Luxery Twin Room</p>
+              </div>
+              <div class="news__block-meta-item">
+                <img src="./assets/images/comment.svg" alt="Comment Icon" />
+                <p>2 comments</p>
+              </div>
+            </div>
+            <h4 class="news__block-title">How To Travel With Map</h4>
+            <p class="news__block-text text">Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.</p>
+            <button class="news__block-button">
+              Read More
+              <img class="news__block-button-icon" src="./assets/images/arrow-next.svg" alt="Arrow Icon" />
+            </button>
+          </div>
+        </div>
+    </section>
+    <section class="section stay-in-touch">
+      <p class="stay-in-touch__text">Stay in Touch</p>
+      <h3 class="stay-in-touch__title">Signup to receive news and updates from our hotel.</h3>
+      <form class="stay-in-touch__form">
+        <input placeholder="Enter Your Email Address" class="stay-in-touch__form-input" />
+        <button class="stay-in-touch__form-button">subscribe</button>
+      </form>
+    </section>
+    <section class="section stay-connected">
+      <div class="stay-connected__block">
+        <div class="header__logo">
+          <img src="./assets/images/logo.svg" alt="logo" class="stay-connected__logo-image">
+          <p class="header__logo-text">HOTEL</p>
+        </div>
+        <p class="text">Itawa is a responsive real estate landing page template. Itawa is a landing page
+          template. Itawa template.</p>
+      </div>
+
+      <div class="stay-connected__block">
+        <h5 class="stay-connected__heading">Contact Us</h5>
+        <div class="stay-connected__contact">
+          <img src="./assets/images/map.svg" alt="map" class="stay-connected__contact-icon">
+          <span class="stay-connected__contact-text text">123 Business Centre London SW1A 1AA</span>
+        </div>
+        <div class="stay-connected__contact">
+          <img src="./assets/images/phone.svg" alt="phone" class="stay-connected__contact-icon">
+          <span class="stay-connected__contact-text text">+1 0000 000 00</span>
+        </div>
+        <div class="stay-connected__contact">
+          <img src="./assets/images/mail.svg" alt="mail" class="stay-connected__contact-icon">
+          <span class="stay-connected__contact-text text">info@businessname.com</span>
+        </div>
+      </div>
+
+      <div class="stay-connected__block">
+        <h5 class="stay-connected__heading">Follow Us</h5>
+        <div class="stay-connected__socials">
+          <div class="stay-connected__social">
+            <img src="./assets/images/facebook.svg" alt="facebook" class="stay-connected__social-icon">
+          </div>
+          <div class="stay-connected__social">
+            <img src="./assets/images/instagram.svg" alt="instagram" class="stay-connected__social-icon">
+          </div>
+          <div class="stay-connected__social">
+            <img src="./assets/images/twiter.svg" alt="twitter" class="stay-connected__social-icon">
+          </div>
+        </div>
+        <p class="stay-connected__text text">Itawa is a responsive real estate landing page template. Itawa is a landing page
+          template. Itawa template.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <p>
+          ©HOTEL Official 2022
+        </p>
+        <p>
+          Privacy policy
+          Cookies
+          Terms of service
+        </p>
+      </div>
+    </footer>
+  </menu>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

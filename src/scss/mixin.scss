@@ -1,0 +1,58 @@
+@mixin font-style(
+  $font-weight,
+  $font-size,
+  $line-height,
+  $letter-spacing,
+  $text-align
+) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  text-align: $text-align;
+}
+
+@mixin position-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin position-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin position-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin position-column($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin position-column-center($gap) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+@mixin position-column-start($gap) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $gap;
+}
+
+@mixin position-wrap($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
