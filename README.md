@@ -1,4 +1,4 @@
-# 🏨 onikaChorba Hotel Website
+# 🏨 Hotel Website
 
 **Description:** A simple hotel website, built following a ready-made design mockup. The page is created using HTML5, SCSS, and JavaScript, faithfully reproducing the layout and style of the mockup 🎨.
 
